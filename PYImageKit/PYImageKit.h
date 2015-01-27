@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PYImageKit : NSObject
+#import "PYImageCache.h"
+#import "PYImageLayer.h"
+#import "PYImageView.h"
 
-@end
+#import "PYAnimator.h"
