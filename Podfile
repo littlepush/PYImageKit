@@ -5,7 +5,7 @@ target 'PYImageKit' do
 
 pod "PYCore", "~> 0.9"
 pod "PYUIKit", "~> 0.9"
-pod "PYControllers", "~> 0.1"
+pod "PYControllers", "~> 0.2"
 
 end
 
