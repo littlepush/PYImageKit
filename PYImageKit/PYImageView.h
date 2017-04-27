@@ -40,8 +40,9 @@
  ENJOY YOUR LIFE AND BE FAR AWAY FROM BUGS.
  */
 
-#import "PYResponderView.h"
+//#import "PYResponderView.h"
 #import <PYCore/PYCore.h>
+#import <PYControllers/PYControllers.h>
 
 @interface PYImageView : UIImageView
 {

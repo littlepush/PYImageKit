@@ -40,10 +40,9 @@
  ENJOY YOUR LIFE AND BE FAR AWAY FROM BUGS.
  */
 
-#import "PYStaticLayer.h"
 #import <QuartzCore/QuartzCore.h>
 #import <PYCore/PYCore.h>
-#import <UIKit/UIKit.h>
+#import <PYControllers/PYControllers.h>
 
 // Create a blur image with specified radius
 #ifdef __cplusplus

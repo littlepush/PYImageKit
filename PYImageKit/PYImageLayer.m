@@ -41,8 +41,8 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <PYUIKit/PYUIKit.h>
 #import "PYImageLayer.h"
-#import "PYUIKitMacro.h"
 #import "PYImageCache.h"
 #import "UIImage+UIKit.h"
 

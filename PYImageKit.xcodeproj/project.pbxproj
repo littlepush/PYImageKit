@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73127537A444E3A5A69F2F7B /* libPods-PYImageKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFF1A88866489E3F151E56E /* libPods-PYImageKit.a */; };
+		3FC9CC7ECCEE09196BA09F3D /* libPods-PYImageKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D0934D9D4ECBB8239EF718 /* libPods-PYImageKit.a */; };
+		6A4A60262A601FCF489F785A /* libPods-PYImageKitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5B9916B77C958E68DB969A /* libPods-PYImageKitTest.a */; };
+		E66A098E1EB212490065E286 /* PYImageKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E66A098D1EB212490065E286 /* PYImageKitTest.m */; };
+		E66A09901EB212490065E286 /* libPYImageKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E8B8DF1A77FC5600FDF235 /* libPYImageKit.a */; };
 		E6E8B8E31A77FC5600FDF235 /* PYImageKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6E8B8E21A77FC5600FDF235 /* PYImageKit.h */; };
 		E6E8B9011A77FD6000FDF235 /* PYAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8FA1A77FD6000FDF235 /* PYAnimator.m */; };
 		E6E8B9021A77FD6000FDF235 /* PYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8FC1A77FD6000FDF235 /* PYImageCache.m */; };
 		E6E8B9031A77FD6000FDF235 /* PYImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8FE1A77FD6000FDF235 /* PYImageLayer.m */; };
 		E6E8B9041A77FD6000FDF235 /* PYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B9001A77FD6000FDF235 /* PYImageView.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E66A09911EB212490065E286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6E8B8D71A77FC5600FDF235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6E8B8DE1A77FC5600FDF235;
+			remoteInfo = PYImageKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E6E8B8DD1A77FC5600FDF235 /* CopyFiles */ = {
@@ -29,9 +42,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		11923C6D7C8B5FC15AE26FB4 /* Pods-PYImageKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYImageKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYImageKit/Pods-PYImageKit.debug.xcconfig"; sourceTree = "<group>"; };
-		4FFF1A88866489E3F151E56E /* libPods-PYImageKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYImageKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4A8C4D2ACE47F80FFC763B6 /* Pods-PYImageKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYImageKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYImageKit/Pods-PYImageKit.release.xcconfig"; sourceTree = "<group>"; };
+		49D0934D9D4ECBB8239EF718 /* libPods-PYImageKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYImageKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7557ADC622E47378977EC8E0 /* Pods-PYImageKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYImageKitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYImageKitTest/Pods-PYImageKitTest.debug.xcconfig"; sourceTree = "<group>"; };
+		93DF340F7FA00B6BFDFDB70A /* Pods-PYImageKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYImageKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYImageKit/Pods-PYImageKit.release.xcconfig"; sourceTree = "<group>"; };
+		A4CAC6C567E7CC5F46825186 /* Pods-PYImageKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYImageKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYImageKit/Pods-PYImageKit.debug.xcconfig"; sourceTree = "<group>"; };
+		BA5B9916B77C958E68DB969A /* libPods-PYImageKitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYImageKitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D68A0CB4F7B70698273A3B4A /* Pods-PYImageKitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYImageKitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYImageKitTest/Pods-PYImageKitTest.release.xcconfig"; sourceTree = "<group>"; };
+		E66A098B1EB212490065E286 /* PYImageKitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYImageKitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66A098D1EB212490065E286 /* PYImageKitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYImageKitTest.m; sourceTree = "<group>"; };
+		E66A098F1EB212490065E286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E8B8DF1A77FC5600FDF235 /* libPYImageKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPYImageKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E8B8E21A77FC5600FDF235 /* PYImageKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYImageKit.h; sourceTree = "<group>"; };
 		E6E8B8F91A77FD6000FDF235 /* PYAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAnimator.h; sourceTree = "<group>"; };
@@ -45,41 +64,63 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E66A09881EB212490065E286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66A09901EB212490065E286 /* libPYImageKit.a in Frameworks */,
+				6A4A60262A601FCF489F785A /* libPods-PYImageKitTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6E8B8DC1A77FC5600FDF235 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73127537A444E3A5A69F2F7B /* libPods-PYImageKit.a in Frameworks */,
+				3FC9CC7ECCEE09196BA09F3D /* libPods-PYImageKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9AC06E60CECDB57580D4735C /* Pods */ = {
+		251F23939CCAE941B1103CED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				11923C6D7C8B5FC15AE26FB4 /* Pods-PYImageKit.debug.xcconfig */,
-				A4A8C4D2ACE47F80FFC763B6 /* Pods-PYImageKit.release.xcconfig */,
+				A4CAC6C567E7CC5F46825186 /* Pods-PYImageKit.debug.xcconfig */,
+				93DF340F7FA00B6BFDFDB70A /* Pods-PYImageKit.release.xcconfig */,
+				7557ADC622E47378977EC8E0 /* Pods-PYImageKitTest.debug.xcconfig */,
+				D68A0CB4F7B70698273A3B4A /* Pods-PYImageKitTest.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CED4047567C80467A93B19A9 /* Frameworks */ = {
+		CE1B2F7631A4678B27583EC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4FFF1A88866489E3F151E56E /* libPods-PYImageKit.a */,
+				49D0934D9D4ECBB8239EF718 /* libPods-PYImageKit.a */,
+				BA5B9916B77C958E68DB969A /* libPods-PYImageKitTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E66A098C1EB212490065E286 /* PYImageKitTest */ = {
+			isa = PBXGroup;
+			children = (
+				E66A098D1EB212490065E286 /* PYImageKitTest.m */,
+				E66A098F1EB212490065E286 /* Info.plist */,
+			);
+			path = PYImageKitTest;
 			sourceTree = "<group>";
 		};
 		E6E8B8D61A77FC5600FDF235 = {
 			isa = PBXGroup;
 			children = (
 				E6E8B8E11A77FC5600FDF235 /* PYImageKit */,
+				E66A098C1EB212490065E286 /* PYImageKitTest */,
 				E6E8B8E01A77FC5600FDF235 /* Products */,
-				9AC06E60CECDB57580D4735C /* Pods */,
-				CED4047567C80467A93B19A9 /* Frameworks */,
+				251F23939CCAE941B1103CED /* Pods */,
+				CE1B2F7631A4678B27583EC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E6E8B8DF1A77FC5600FDF235 /* libPYImageKit.a */,
+				E66A098B1EB212490065E286 /* PYImageKitTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,15 +152,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E66A098A1EB212490065E286 /* PYImageKitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66A09951EB212490065E286 /* Build configuration list for PBXNativeTarget "PYImageKitTest" */;
+			buildPhases = (
+				3EE4357C65330E17D0A38D86 /* [CP] Check Pods Manifest.lock */,
+				E66A09871EB212490065E286 /* Sources */,
+				E66A09881EB212490065E286 /* Frameworks */,
+				E66A09891EB212490065E286 /* Resources */,
+				C3B69647004D19E59412D0ED /* [CP] Embed Pods Frameworks */,
+				1F2F90E2CFAE3A1E67AB8006 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E66A09921EB212490065E286 /* PBXTargetDependency */,
+			);
+			name = PYImageKitTest;
+			productName = PYImageKitTest;
+			productReference = E66A098B1EB212490065E286 /* PYImageKitTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E6E8B8DE1A77FC5600FDF235 /* PYImageKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6E8B8F31A77FC5600FDF235 /* Build configuration list for PBXNativeTarget "PYImageKit" */;
 			buildPhases = (
-				425EF824BEA0EE0A1CB5F915 /* Check Pods Manifest.lock */,
+				B676F3BD9E38259BBA44E7A6 /* [CP] Check Pods Manifest.lock */,
 				E6E8B8DB1A77FC5600FDF235 /* Sources */,
 				E6E8B8DC1A77FC5600FDF235 /* Frameworks */,
 				E6E8B8DD1A77FC5600FDF235 /* CopyFiles */,
-				72733AF43BECE5160D8DCAC8 /* Copy Pods Resources */,
+				38C8795C309B266CB10B4A99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +201,11 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Push Lab";
 				TargetAttributes = {
+					E66A098A1EB212490065E286 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = VT7263HWQT;
+						ProvisioningStyle = Automatic;
+					};
 					E6E8B8DE1A77FC5600FDF235 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -156,34 +224,45 @@
 			projectRoot = "";
 			targets = (
 				E6E8B8DE1A77FC5600FDF235 /* PYImageKit */,
+				E66A098A1EB212490065E286 /* PYImageKitTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		E66A09891EB212490065E286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
-		425EF824BEA0EE0A1CB5F915 /* Check Pods Manifest.lock */ = {
+		1F2F90E2CFAE3A1E67AB8006 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PYImageKitTest/Pods-PYImageKitTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72733AF43BECE5160D8DCAC8 /* Copy Pods Resources */ = {
+		38C8795C309B266CB10B4A99 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,9 +270,62 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PYImageKit/Pods-PYImageKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3EE4357C65330E17D0A38D86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B676F3BD9E38259BBA44E7A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3B69647004D19E59412D0ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PYImageKitTest/Pods-PYImageKitTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E66A09871EB212490065E286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66A098E1EB212490065E286 /* PYImageKitTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6E8B8DB1A77FC5600FDF235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,7 +339,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E66A09921EB212490065E286 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6E8B8DE1A77FC5600FDF235 /* PYImageKit */;
+			targetProxy = E66A09911EB212490065E286 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E66A09931EB212490065E286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7557ADC622E47378977EC8E0 /* Pods-PYImageKitTest.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VT7263HWQT;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PYImageKitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushlab.PYImageKitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E66A09941EB212490065E286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D68A0CB4F7B70698273A3B4A /* Pods-PYImageKitTest.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VT7263HWQT;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PYImageKitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushlab.PYImageKitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E6E8B8F11A77FC5600FDF235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -284,7 +468,7 @@
 		};
 		E6E8B8F41A77FC5600FDF235 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11923C6D7C8B5FC15AE26FB4 /* Pods-PYImageKit.debug.xcconfig */;
+			baseConfigurationReference = A4CAC6C567E7CC5F46825186 /* Pods-PYImageKit.debug.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,7 +478,7 @@
 		};
 		E6E8B8F51A77FC5600FDF235 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4A8C4D2ACE47F80FFC763B6 /* Pods-PYImageKit.release.xcconfig */;
+			baseConfigurationReference = 93DF340F7FA00B6BFDFDB70A /* Pods-PYImageKit.release.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,6 +489,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E66A09951EB212490065E286 /* Build configuration list for PBXNativeTarget "PYImageKitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66A09931EB212490065E286 /* Debug */,
+				E66A09941EB212490065E286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E6E8B8DA1A77FC5600FDF235 /* Build configuration list for PBXProject "PYImageKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
