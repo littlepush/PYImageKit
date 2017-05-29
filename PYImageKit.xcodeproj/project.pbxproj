@@ -11,6 +11,11 @@
 		6A4A60262A601FCF489F785A /* libPods-PYImageKitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5B9916B77C958E68DB969A /* libPods-PYImageKitTest.a */; };
 		E66A098E1EB212490065E286 /* PYImageKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E66A098D1EB212490065E286 /* PYImageKitTest.m */; };
 		E66A09901EB212490065E286 /* libPYImageKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E8B8DF1A77FC5600FDF235 /* libPYImageKit.a */; };
+		E6B39E921EDCB1460085D0AF /* PYImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B39E891EDCB1460085D0AF /* PYImageCropViewController.m */; };
+		E6B39E931EDCB1460085D0AF /* PYImagePickerApperance.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B39E8B1EDCB1460085D0AF /* PYImagePickerApperance.m */; };
+		E6B39E941EDCB1460085D0AF /* PYImagePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B39E8D1EDCB1460085D0AF /* PYImagePickerTableViewCell.m */; };
+		E6B39E951EDCB1460085D0AF /* PYImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B39E8F1EDCB1460085D0AF /* PYImagePickerViewController.m */; };
+		E6B39E961EDCB1460085D0AF /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B39E901EDCB1460085D0AF /* UIImage+FixOrientation.m */; };
 		E6E8B8E31A77FC5600FDF235 /* PYImageKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6E8B8E21A77FC5600FDF235 /* PYImageKit.h */; };
 		E6E8B9011A77FD6000FDF235 /* PYAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8FA1A77FD6000FDF235 /* PYAnimator.m */; };
 		E6E8B9021A77FD6000FDF235 /* PYImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8FC1A77FD6000FDF235 /* PYImageCache.m */; };
@@ -51,6 +56,16 @@
 		E66A098B1EB212490065E286 /* PYImageKitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYImageKitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E66A098D1EB212490065E286 /* PYImageKitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYImageKitTest.m; sourceTree = "<group>"; };
 		E66A098F1EB212490065E286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6B39E881EDCB1460085D0AF /* PYImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYImageCropViewController.h; sourceTree = "<group>"; };
+		E6B39E891EDCB1460085D0AF /* PYImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYImageCropViewController.m; sourceTree = "<group>"; };
+		E6B39E8A1EDCB1460085D0AF /* PYImagePickerApperance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYImagePickerApperance.h; sourceTree = "<group>"; };
+		E6B39E8B1EDCB1460085D0AF /* PYImagePickerApperance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYImagePickerApperance.m; sourceTree = "<group>"; };
+		E6B39E8C1EDCB1460085D0AF /* PYImagePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYImagePickerTableViewCell.h; sourceTree = "<group>"; };
+		E6B39E8D1EDCB1460085D0AF /* PYImagePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYImagePickerTableViewCell.m; sourceTree = "<group>"; };
+		E6B39E8E1EDCB1460085D0AF /* PYImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYImagePickerViewController.h; sourceTree = "<group>"; };
+		E6B39E8F1EDCB1460085D0AF /* PYImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYImagePickerViewController.m; sourceTree = "<group>"; };
+		E6B39E901EDCB1460085D0AF /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		E6B39E911EDCB1460085D0AF /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		E6E8B8DF1A77FC5600FDF235 /* libPYImageKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPYImageKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E8B8E21A77FC5600FDF235 /* PYImageKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYImageKit.h; sourceTree = "<group>"; };
 		E6E8B8F91A77FD6000FDF235 /* PYAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAnimator.h; sourceTree = "<group>"; };
@@ -136,6 +151,16 @@
 		E6E8B8E11A77FC5600FDF235 /* PYImageKit */ = {
 			isa = PBXGroup;
 			children = (
+				E6B39E881EDCB1460085D0AF /* PYImageCropViewController.h */,
+				E6B39E891EDCB1460085D0AF /* PYImageCropViewController.m */,
+				E6B39E8A1EDCB1460085D0AF /* PYImagePickerApperance.h */,
+				E6B39E8B1EDCB1460085D0AF /* PYImagePickerApperance.m */,
+				E6B39E8C1EDCB1460085D0AF /* PYImagePickerTableViewCell.h */,
+				E6B39E8D1EDCB1460085D0AF /* PYImagePickerTableViewCell.m */,
+				E6B39E8E1EDCB1460085D0AF /* PYImagePickerViewController.h */,
+				E6B39E8F1EDCB1460085D0AF /* PYImagePickerViewController.m */,
+				E6B39E901EDCB1460085D0AF /* UIImage+FixOrientation.m */,
+				E6B39E911EDCB1460085D0AF /* UIImage+FixOrientation.h */,
 				E6E8B8E21A77FC5600FDF235 /* PYImageKit.h */,
 				E6E8B8F91A77FD6000FDF235 /* PYAnimator.h */,
 				E6E8B8FA1A77FD6000FDF235 /* PYAnimator.m */,
@@ -330,8 +355,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B39E931EDCB1460085D0AF /* PYImagePickerApperance.m in Sources */,
+				E6B39E961EDCB1460085D0AF /* UIImage+FixOrientation.m in Sources */,
+				E6B39E951EDCB1460085D0AF /* PYImagePickerViewController.m in Sources */,
+				E6B39E941EDCB1460085D0AF /* PYImagePickerTableViewCell.m in Sources */,
 				E6E8B9031A77FD6000FDF235 /* PYImageLayer.m in Sources */,
 				E6E8B9011A77FD6000FDF235 /* PYAnimator.m in Sources */,
+				E6B39E921EDCB1460085D0AF /* PYImageCropViewController.m in Sources */,
 				E6E8B9021A77FD6000FDF235 /* PYImageCache.m in Sources */,
 				E6E8B9041A77FD6000FDF235 /* PYImageView.m in Sources */,
 			);
@@ -496,6 +526,7 @@
 				E66A09941EB212490065E286 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6E8B8DA1A77FC5600FDF235 /* Build configuration list for PBXProject "PYImageKit" */ = {
 			isa = XCConfigurationList;

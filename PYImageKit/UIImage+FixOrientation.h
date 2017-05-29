@@ -1,16 +1,16 @@
 //
-//  PYImageKit.h
-//  PYImageKit
+//  UIImage+FixOrientation.h
+//  ExportApp
 //
-//  Created by ChenPush on 1/28/15.
-//  Copyright (c) 2015 Push Lab. All rights reserved.
+//  Created by Push Chen on 30/05/2017.
+//  Copyright © 2017 BaoSteel. All rights reserved.
 //
 
 /*
  LGPL V3 Lisence
  This file is part of cleandns.
  
- PYImageKit is free software: you can redistribute it and/or modify
+ PYAudioKit is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
@@ -40,15 +40,13 @@
  ENJOY YOUR LIFE AND BE FAR AWAY FROM BUGS.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-#import "PYImageCache.h"
-#import "PYImageLayer.h"
-#import "PYImageView.h"
+@interface UIImage (FixOrientation)
 
-#import "PYAnimator.h"
+- (UIImage *)fixOrientation;
 
-#import "PYImagePickerApperance.h"
+@end
 
 // @littlepush
 // littlepush@gmail.com
