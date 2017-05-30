@@ -53,6 +53,7 @@ NSString *const kPYIPStringConfirm = @"kPYIPStringConfirm";
 @interface PYImagePickerApperance()
 {
     UIImage             *_cameraIcon;
+    BOOL                _needCrop;
 }
 @end
 
@@ -102,6 +103,8 @@ PYSingletonDefaultImplementation
      forKey:kPYIPStringConfirm];
 }
 
+@synthesize needCrop = _needCrop;
+
 @synthesize cameraIcon = _cameraIcon;
 
 - (id)init
@@ -126,6 +129,7 @@ PYSingletonDefaultImplementation
         _cameraIcon = [UIImage imageWithData:
                        [NSData dataWithContentsOfURL:
                         [NSURL URLWithString:PY_IPCameraIcon]]];
+        _needCrop = YES;
     }
     return self;
 }

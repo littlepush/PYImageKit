@@ -73,6 +73,11 @@ typedef void (^PYImagePickerSelectedImage)(UIImage *image);
 @property (nonatomic, copy)     NSString        *confirmTitle;
 
 /*
+ Need Crop Image, default is YES
+ */
+@property (nonatomic, assign)   BOOL            needCrop;
+
+/*
  Display the image picker view
  */
 + (void)show:(PYImagePickerSelectedImage)onSelected;
