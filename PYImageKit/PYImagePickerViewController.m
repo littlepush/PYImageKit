@@ -151,20 +151,20 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     DUMPObj(info);
     UIImage *_image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    if ( [PYImagePickerApperance sharedApperance].needCrop ) {
-        __weak PYImagePickerViewController *_ = self;
-        [self dismissViewControllerAnimated:YES completion:^{
+    __weak PYImagePickerViewController *_ = self;
+    [self dismissViewControllerAnimated:YES completion:^{
+        if ( [PYImagePickerApperance sharedApperance].needCrop ) {
             PYImageCropViewController *_icvc = [PYImageCropViewController object];
             _icvc.originImage = _image;
             _icvc.selectedImageEvent = self.selectedImageEvent;
             [_.navigationController pushViewController:_icvc animated:YES];
-        }];
-    } else {
-        if ( self.selectedImageEvent ) {
-            self.selectedImageEvent(_image);
+        } else {
+            if ( _.selectedImageEvent ) {
+                _.selectedImageEvent(_image);
+            }
+            [[PYApperance sharedApperance] dismissLastPoppedViewController];
         }
-        [[PYApperance sharedApperance] dismissLastPoppedViewController];
-    }
+    }];
 }
 
 - (void)PYEventHandler(ImageManager, PYTableManagerEventCreateNewCell) {
