@@ -169,6 +169,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     __block NSMutableArray *_images = [NSMutableArray array];
     __block NSMutableArray *_cellCollection = nil;
+    __block NSMutableArray *_allImages = [NSMutableArray array];
     __block NSInteger _cellImageCount = 0;
     __weak PYImagePickerViewController *_ = self;
     
@@ -177,28 +178,34 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     PHFetchResult *_allPhotos = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:_photoOptions];
     [_allPhotos enumerateObjectsUsingBlock:^(PHAsset *asset, NSUInteger idx, BOOL *stop) {
         if ( asset == nil ) return;
-        if ( _cellImageCount == 0 ) {
-            _cellCollection = [NSMutableArray array];
-            if ( [_images count] == 0 ) {
-                // First line, First one
-                PYPair *_pair = [PYPair object];
-                _pair.firstObj = [PYImagePickerApperance sharedApperance].cameraIcon;
-                _pair.secondObj = nil;
-                [_cellCollection addObject:_pair];
-                _cellImageCount = 1;
-            }
-        }
         PYPair *_pair = [PYPair object];
         _pair.firstObj = nil;
         _pair.secondObj = asset;
-        [_cellCollection addObject:_pair];
-        ++_cellImageCount;
-        if ( _cellImageCount == 3 ) {
-            [_images addObject:_cellCollection];
-            _cellImageCount = 0;
-        }
-        // Last One
-        if ( idx == _allPhotos.count - 1 ) {
+        [_allImages insertObject:_pair atIndex:0];
+        // All loaded
+        if ( idx == _allPhotos.count - 1) {
+            // Re-org
+            _cellCollection = [NSMutableArray array];
+            // First line, First one
+            PYPair *_pair = [PYPair object];
+            _pair.firstObj = [PYImagePickerApperance sharedApperance].cameraIcon;
+            _pair.secondObj = nil;
+            //[_cellCollection addObject:_pair];
+            [_cellCollection addObject:_pair];
+            _cellImageCount = 1;
+            
+            for ( NSUInteger i = 0; i < _allImages.count; ++i ) {
+                [_cellCollection addObject:_allImages[i]];
+                _cellImageCount += 1;
+                if ( _cellImageCount == 3 ) {
+                    [_images addObject:_cellCollection];
+                    _cellCollection = [NSMutableArray array];
+                    _cellCollection = 0;
+                }
+            }
+            if ( _cellCollection.count > 0 ) {
+                [_images addObject:_cellCollection];
+            }
             [_ _reloadPhotoListWithImages:_images];
         }
     }];
