@@ -215,7 +215,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                 if ( _cellImageCount == 3 ) {
                     [_images addObject:_cellCollection];
                     _cellCollection = [NSMutableArray array];
-                    _cellCollection = 0;
+                    _cellImageCount = 0;
                 }
             }
             if ( _cellCollection.count > 0 ) {
