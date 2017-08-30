@@ -43,6 +43,7 @@
 #import "PYImagePickerViewController.h"
 #import "PYImagePickerTableViewCell.h"
 #import "PYImageCropViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface PYImagePickerViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
@@ -116,7 +117,9 @@
         UIImagePickerController *_picker = [[UIImagePickerController alloc] init];
         _picker.modalPresentationStyle = UIModalPresentationCurrentContext;
         _picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        _picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+        //_picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
+        _picker.mediaTypes = @[(NSString *)kUTTypeMovie, (NSString *)kUTTypeImage];
+        _picker.videoQuality = UIImagePickerControllerQualityType640x480;
         _picker.delegate = self;
         [self presentViewController:_picker animated:YES completion:nil];
     } else {
@@ -150,21 +153,32 @@
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     DUMPObj(info);
-    UIImage *_image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    __weak PYImagePickerViewController *_ = self;
-    [self dismissViewControllerAnimated:YES completion:^{
-        if ( [PYImagePickerApperance sharedApperance].needCrop ) {
-            PYImageCropViewController *_icvc = [PYImageCropViewController object];
-            _icvc.originImage = _image;
-            _icvc.selectedImageEvent = self.selectedImageEvent;
-            [_.navigationController pushViewController:_icvc animated:YES];
-        } else {
-            if ( _.selectedImageEvent ) {
-                _.selectedImageEvent(_image);
-            }
+    NSString *_mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    if ( [_mediaType isEqualToString:(NSString *)kUTTypeMovie] ) {
+        // This is video
+        NSString *_mediaUrl = [(NSURL *)[info objectForKey:UIImagePickerControllerMediaURL] absoluteString];
+        __weak PYImagePickerViewController *_ = self;
+        [self dismissViewControllerAnimated:YES completion:^{
+            if ( _.recordedVideoEvent ) _.recordedVideoEvent(_mediaUrl);
             [[PYApperance sharedApperance] dismissLastPoppedViewController];
-        }
-    }];
+        }];
+    } else {
+        UIImage *_image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        __weak PYImagePickerViewController *_ = self;
+        [self dismissViewControllerAnimated:YES completion:^{
+            if ( [PYImagePickerApperance sharedApperance].needCrop ) {
+                PYImageCropViewController *_icvc = [PYImageCropViewController object];
+                _icvc.originImage = _image;
+                _icvc.selectedImageEvent = _.selectedImageEvent;
+                [_.navigationController pushViewController:_icvc animated:YES];
+            } else {
+                if ( _.selectedImageEvent ) {
+                    _.selectedImageEvent(_image);
+                }
+                [[PYApperance sharedApperance] dismissLastPoppedViewController];
+            }
+        }];
+    }
 }
 
 - (void)PYEventHandler(ImageManager, PYTableManagerEventCreateNewCell) {

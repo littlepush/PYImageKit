@@ -49,6 +49,11 @@
  */
 @property (nonatomic, copy)     PYImagePickerSelectedImage      selectedImageEvent;
 
+/*!
+ The block to callback when recorded a video
+ */
+@property (nonatomic, copy)     PYImagePickerRecordedVideo      recordedVideoEvent;
+
 @end
 
 // @littlepush

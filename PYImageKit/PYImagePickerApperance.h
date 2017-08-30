@@ -44,6 +44,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^PYImagePickerSelectedImage)(UIImage *image);
+typedef void (^PYImagePickerRecordedVideo)(NSString *videoPath);
 
 @interface PYImagePickerApperance : NSObject
 

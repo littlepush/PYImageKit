@@ -144,6 +144,16 @@ PYSingletonDefaultImplementation
      animation:kPopUpAnimationTypeSlideFromBottom];
 }
 
++ (void)show:(PYImagePickerSelectedImage)onSelected orVideo:(PYImagePickerRecordedVideo)onRecorded
+{
+    PYImagePickerViewController *_ipvc = [PYImagePickerViewController object];
+    _ipvc.selectedImageEvent = [onSelected copy];
+    _ipvc.recordedVideoEvent = [onRecorded copy];
+    [[PYApperance sharedApperance]
+     presentPopViewController:_ipvc
+     animation:kPopUpAnimationTypeSlideFromBottom];
+}
+
 @end
 
 // @littlepush
