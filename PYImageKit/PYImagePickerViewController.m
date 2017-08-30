@@ -156,10 +156,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     NSString *_mediaType = [info objectForKey:UIImagePickerControllerMediaType];
     if ( [_mediaType isEqualToString:(NSString *)kUTTypeMovie] ) {
         // This is video
-        NSString *_mediaUrl = [(NSURL *)[info objectForKey:UIImagePickerControllerMediaURL] absoluteString];
-        __weak PYImagePickerViewController *_ = self;
+        NSURL *_videoUrl = [info objectForKey:UIImagePickerControllerMediaURL];
+        NSString *_videoName = [_videoUrl lastPathComponent];
+        NSData *_videoData = [NSData dataWithContentsOfURL:_videoUrl];
+        NSString *_tempPath = [PYCACHEPATH stringByAppendingPathComponent:_videoName];
+        [_videoData writeToFile:_tempPath atomically:NO];
+        if ( self.recordedVideoEvent ) self.recordedVideoEvent(_tempPath);
         [self dismissViewControllerAnimated:YES completion:^{
-            if ( _.recordedVideoEvent ) _.recordedVideoEvent(_mediaUrl);
             [[PYApperance sharedApperance] dismissLastPoppedViewController];
         }];
     } else {
