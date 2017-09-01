@@ -82,6 +82,7 @@ typedef void (^PYImagePickerRecordedVideo)(NSString *videoPath);
  Display the image picker view
  */
 + (void)show:(PYImagePickerSelectedImage)onSelected;
++ (void)show:(PYImagePickerSelectedImage)onSelected orVideo:(PYImagePickerRecordedVideo)onRecorded;
 
 @end
 
