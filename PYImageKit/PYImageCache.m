@@ -347,16 +347,16 @@ PYSingletonDefaultImplementation;
         return;
     }
     [_mutex lockAndDo:^id{
-        NSMutableArray *_pendingObserverList = [_pendingList objectForKey:imageName];
+        NSMutableArray *_pendingObserverList = [self->_pendingList objectForKey:imageName];
         if ( _pendingObserverList == nil ) {
             // Add new operation
             __weak PYImageCache *_wss = self;
             _pendingObserverList = [NSMutableArray array];
             [_pendingObserverList addObject:get];
-            [_pendingList setObject:_pendingObserverList forKey:imageName];
+            [self->_pendingList setObject:_pendingObserverList forKey:imageName];
             
             // Start the loading queue.
-            [_imageLoadingQueue addOperationWithBlock:^{
+            [self->_imageLoadingQueue addOperationWithBlock:^{
                 NSURL *_url = [NSURL URLWithString:imageName];
                 NSURLRequest *_request = [NSURLRequest requestWithURL:_url];
                 NSURLResponse *_response;
@@ -409,7 +409,7 @@ PYSingletonDefaultImplementation;
 - (void)eraseAllCachedImages:(PYActionDone)done failed:(PYActionFailed)failed
 {
     [_imageLoadingQueue addOperationWithBlock:^{
-        [_mutex lockAndDo:^id{
+        [self->_mutex lockAndDo:^id{
             NSFileManager *fm = [NSFileManager defaultManager];
             NSError *_error = nil;
             // Remove the cache folder

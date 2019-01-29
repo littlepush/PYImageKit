@@ -195,9 +195,9 @@ UIImage *PYUIBlurImage(UIImage *inputImage, CGFloat radius)
     //@synchronized( self ) {
     [_mutex lockAndDo:^id{
         // Clear old image.
-        _image = nil;
-        _image = anImage;
-        _loadingUrl = [@"" copy];
+        self->_image = nil;
+        self->_image = anImage;
+        self->_loadingUrl = [@"" copy];
         // Set new value
         [self _setImageToContext];
         return nil;
@@ -232,15 +232,15 @@ UIImage *PYUIBlurImage(UIImage *inputImage, CGFloat radius)
     
     [_mutex lockAndDo:^id{
         // Check if is loading the image.
-        if ( [_loadingUrl length] > 0 && [_loadingUrl isEqualToString:imageUrl] )
+        if ( [self->_loadingUrl length] > 0 && [self->_loadingUrl isEqualToString:imageUrl] )
             return nil;
         
-        _image = nil;
+        self->_image = nil;
         
-        _loadingUrl = [imageUrl copy];
+        self->_loadingUrl = [imageUrl copy];
         // Fetch the cache.
-        _image = [SHARED_IMAGECACHE imageByName:_loadingUrl];
-        if ( _image != nil ) {
+        self->_image = [SHARED_IMAGECACHE imageByName:self->_loadingUrl];
+        if ( self->_image != nil ) {
             [self _setImageToContext];
             if ( done ) done();
             return nil;
@@ -248,7 +248,7 @@ UIImage *PYUIBlurImage(UIImage *inputImage, CGFloat radius)
         
         __weak PYImageLayer *_bss = self;
         [SHARED_IMAGECACHE
-         loadImageNamed:_loadingUrl
+         loadImageNamed:self->_loadingUrl
          get:^(UIImage *loadedImage, NSString *imageName){
              // Did loaded the image...
              if ( ![imageName isEqualToString:_bss.loadingUrl] ) {

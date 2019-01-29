@@ -238,15 +238,15 @@
     
     [_mutex lockAndDo:^id{
         // Check if is loading the image.
-        if ( [_loadingUrl length] > 0 && [_loadingUrl isEqualToString:imageUrl] ) {
+        if ( [self->_loadingUrl length] > 0 && [self->_loadingUrl isEqualToString:imageUrl] ) {
             return nil;
         }
         
         [super setImage:nil];
         
-        _loadingUrl = [imageUrl copy];
+        self->_loadingUrl = [imageUrl copy];
         // Fetch the cache.
-        UIImage *_image = [SHARED_IMAGECACHE imageByName:_loadingUrl];
+        UIImage *_image = [SHARED_IMAGECACHE imageByName:self->_loadingUrl];
         if ( _image != nil ) {
             [self setImage:_image];
             if ( done ) done();
@@ -255,7 +255,7 @@
         
         __weak PYImageView *_wss = self;
         [SHARED_IMAGECACHE
-         loadImageNamed:_loadingUrl
+         loadImageNamed:self->_loadingUrl
          get:^(UIImage *loadedImage, NSString *imageName){
              // Did loaded the image...
              if ( ![imageName isEqualToString:_wss.loadingUrl] ) {

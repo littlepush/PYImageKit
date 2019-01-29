@@ -124,7 +124,7 @@
                  contentMode:PHImageContentModeAspectFit
                  options:_cropOp
                  resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-                     [_imageBtn[i] setBackgroundImage:result forState:UIControlStateNormal];
+                     [self->_imageBtn[i] setBackgroundImage:result forState:UIControlStateNormal];
                  }];
             }
         }
